@@ -1,0 +1,643 @@
+*{
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 0.2%;
+    margin-bottom: 0%;
+    font-family: 'Ubuntu', sans-serif;
+  
+}
+.contenedor{
+    min-height: 100vh;
+display: grid;
+gap: 4px;
+grid-template-columns: 2.5fr 2.5fr 1.5fr;
+
+grid-template-rows: auto 3fr 2fr 3fr 2fr auto;
+
+grid-template-areas: 
+'header     header     header' 
+'main       main       article'
+'main       main       article'
+'main       main       aside'
+'main      main        aside'     
+'footer     footer     footer'
+;
+
+}
+.contenedor-nosotros{
+   min-height: 100vh;
+    display: grid;
+    gap: 4px;
+    grid-template-columns: 3fr 3fr;
+    
+    grid-template-rows: auto 3fr 2fr 3fr 2fr auto;
+    
+    grid-template-areas: 
+    'header                header' 
+    'main-nosotros       main-nosotros '
+    'main-nosotros      main-nosotros'
+    'main-nosotros       main-nosotros' 
+    'main-nosotros      main-nosotros '     
+    'footer               footer'
+    ;
+    
+    }
+
+header{
+    
+    border-radius: 10px;
+    height: auto;
+    background-color:rgb(113, 113, 113);
+    padding-right: 2%;
+    margin-top: 0%;
+    grid-area: header;
+    
+    box-shadow: 0 0 0.7rem rgba(41, 40, 40, 0.758);
+}
+
+nav ul{
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+    list-style: none;
+    
+}
+
+li a{
+    overflow: auto;
+    text-decoration: none;
+    color:white;  
+    font-size:medium;
+    transition: background-color 0.3s;
+    
+}
+li :hover{
+   color: rgba(177, 62, 9, 0.758);
+}
+
+.main{
+    border-radius: 1%;
+    grid-area: main;
+    width: 100%;
+    height: 100%;
+    background-image: url(../imagenes/gramofono.jpg); 
+    background-size: 100% 100%;
+   background-attachment: scroll;
+    background-repeat: no-repeat;
+    
+}
+
+   
+
+.animate__animated{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:55px;
+    color: white;
+   text-align: center;
+    padding-top: 5%;
+    width: auto;
+    
+}
+.animacion{
+    min-width: auto;
+width: 100%;
+    word-wrap: break-word;
+}
+
+
+.aside {
+    margin-right: auto;
+    border-radius: 1%;
+    grid-area: aside;
+    width: 98%;
+    height: 100%;
+    background-color: rgb(221, 221, 221);
+   
+    
+}
+.div-iframe{
+ 
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+}
+.div-iframe iframe{
+    height: 100%;
+    width: 100%;
+}
+
+
+footer{
+    border-radius: 10px;
+    background-color:rgb(113, 113, 113);
+    padding: 3%;
+    text-align: center;
+    text-decoration: none;
+    grid-area: footer;
+    transition: background-color 0.3s;
+    
+}
+footer a , .fa-brands {
+    font-size: medium;
+    color: white;
+    padding: 1%;
+   
+   
+}
+footer a :hover{
+    color:rgba(177, 62, 9, 0.758);
+}
+footer p{
+    color: white;
+}
+/* <!-- seccion nosotros --> */
+
+
+.main-nosotros {
+    
+   grid-area: main-nosotros;
+    height: 100%;
+    width: 100%;
+    padding: 0%;
+    text-align: center;
+    font-size: 40px;
+}
+.main-nosotros h1{
+    
+    font-size: 80px;
+}
+.main-nosotros section{
+    min-width: auto;
+    width: 100%;
+        word-wrap: break-word;
+}
+.section-historia{
+    min-width: auto;
+width: 100%;
+    word-wrap: break-word;
+    background-image: url(../imagenes/baner.jpg);
+    background-size: 100% 100%;
+    background-attachment: scroll;
+     background-repeat: no-repeat;
+    min-height: 500px;  
+   
+    color: white;
+   
+}
+.div-1988 p{
+    color: rgb(93, 89, 89);
+    font-size:30px;
+    text-align: center;
+    padding-top: 15%;
+    padding-bottom: 10%;
+}
+
+.borde-lahistoria{
+    min-width: auto;
+    word-wrap: break-word;
+    width: 100%;
+    border: solid black 5px;
+    background-color: rgb(221, 221, 221);
+    border-radius: 10px;
+    height: auto;
+    padding-top: 2%;
+    padding-right: 4px;
+}
+
+.div-1988 div {
+    border-radius: 10px;
+   height: auto;
+   width: 100%;
+   margin: 15px;
+}
+
+.div-1988 img{
+    width: 100%;
+    height: 450px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    
+   
+}
+.div-1988 {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 99%;
+    height: auto;
+
+    
+}
+.mayuscula-titulo{
+    font-size:35px;
+    text-transform: uppercase;
+    }
+     
+
+.años-nosotros{
+    
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.div-2023{
+    min-width: auto;
+    word-wrap: break-word;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+    height: auto;
+}
+.div-2023 div{
+    margin: 15px;
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+}
+.img-2023-historia img{
+    
+    width:100%;
+    height: 500px;
+   
+}
+.borde-lahistoria-2023{
+    border: solid black 5px;
+    background-color: rgb(221, 221, 221);
+   width: 100%;
+  
+}
+.baner-historia{
+    background-image: url(../imagenes/vista-superior-.jpg);
+    background-size: 100% 100%;
+    background-attachment: scroll;
+     background-repeat: no-repeat;
+    height: 500px;
+    padding-top: 15%;
+}
+.viaje-al-pasado{
+    text-align: center;
+    font-size: 35px;
+    padding-top: 10%;
+    color: white;
+}
+.div-2023 p{
+    color: rgb(93, 89, 89);
+    font-size:30px;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+/* SUCURSALES */
+
+
+.main-sucursal{
+    border-radius: 1%;
+   
+    grid-area: main;
+    width: 100%;
+    height: 100%;
+}
+.aside-direcciones{
+    border-radius: 1%;
+    border: solid rgb(0, 0, 0);
+    text-align: center;
+    padding: 2%;
+    color: gray;
+}
+.aside-direcciones h2{
+color: black;
+}
+.aside-sucursales{
+    grid-area: aside;
+    width: 100%;
+    height: 100%;
+    background-color: width(221, 221, 221);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.subtit-sucursales{
+    text-align: center;
+    font-size: xx-large;
+    width: 100%;
+    
+}
+#h1-sucursal{
+   
+   
+    font-size: 40px;
+    text-align: center;
+    padding: 4%; 
+    
+}
+.ifram-sucursales{
+    
+    height: 700px;
+    width: 99%;
+    text-align: center;
+}
+.article-sucursales{
+    
+    border-radius: 1%;
+    grid-area: article;
+    width: 97%;
+    height: 100%;
+    background-color:white;
+    
+    border: solid rgb(0, 0, 0);
+}
+.article-sucursales p {
+    font-family:cursive ;
+    color: gray;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 10%;
+}
+
+/* login// */
+
+.main-contacto{
+    padding-top: 5%;
+    width: 100%;
+    height: auto;
+    grid-area: main-nosotros;
+    
+  
+   display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+.div-formulario {
+    min-width: auto;
+    word-wrap: break-word;
+    width: 78%;
+    height: auto;
+    
+    border-radius: 4px;
+    background-color: #bcbaba70;
+}
+.div-formulario form{
+    padding-left: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    width: auto;
+}
+input[type=text],input[type=email],input[type=number],input[type=date]{
+   
+    width: 70%;
+    border-radius:6px;
+    padding: 1%;
+    padding-left: 5%;
+    border: none;
+}
+input[type=submit]{
+    
+   width: 95%;
+   padding: 1.5%;
+   background-color: rgb(76, 77, 76);
+   border: none;
+   border-radius: 4px;
+   color: white;
+   margin-bottom: 15px;
+
+}
+input[type=submit]:hover{
+background-color:rgb(162, 162, 162)
+}
+.div-formulario label{
+    font-size:large;
+    padding: 1%;
+}
+form h2{
+    padding: 5% 0 5% 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+/* seccion antiguedades */
+.main-antiguedades{
+    grid-area: main-nosotros;
+  
+    width: 100%
+}
+.main-dos{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    width: 100%
+    
+    
+}
+.div-antiguedades{
+  
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.moneda{
+    
+    font-family:cursive ;
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    text-align: center;
+    padding-top: 10%;  
+}
+.fondo-antiguedades{
+    
+    min-width: auto;
+    word-wrap: break-word;
+    width: 100%;
+    margin:5px;
+    text-align: center;
+    font-size: 30px;
+    background-color:rgb(240, 239, 239);
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 5% ;
+    padding-top: 3px;
+    padding-right: 1PX;
+    color: black
+}
+.fondo-antiguedades h2{
+    
+    color: gray;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10%;
+}
+
+
+.div-billetes{
+    text-align: center;
+    
+    width: 100%;
+    height: 100%;
+    
+    background: no-repeat;
+}
+
+.fondo-billetes{
+    min-width: auto;
+    word-wrap: break-word;
+    text-align: center;
+   width: 100%;
+   background-color:rgb(240, 239, 239);
+    margin:5px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    font-size: xx-large;
+    
+}
+
+.div-billetes img{
+    text-align: center;
+    width: 98%;
+    height:380px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+
+}
+.div-cuadros{
+    text-align: center;
+ 
+    width: 100%;
+    height: 100%;
+   
+    background: no-repeat; 
+
+}
+.fondo-cuadros{
+    min-width: auto;
+    word-wrap: break-word;
+    text-align: center;
+    background-color:rgb(240, 239, 239);
+    border-radius: 10px;
+   width: 100%;
+   margin:5px;
+   padding: 20px 0 2px 0;
+   text-align: center;
+   color: black;
+   font-size: 30px;
+}
+
+   
+.div-cuadros img{
+    
+    width: 98%;
+    height:400px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+
+}
+.fondo-autos{
+    font-size: 30px;
+padding: 10px 0px 10px 0px;
+    text-align: center;
+   width: 100%;
+   min-width: auto;
+    word-wrap: break-word;
+   margin:5px;
+    
+   background-color:rgb(240, 239, 239);
+    color: black;
+   border-radius: 10px;
+}
+
+.div-autos img{
+    width:98%;
+    height: 380px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+
+}
+.data{
+    background-image: url(../imagenes/moneda.jpg);
+    background-size: 110% 100%;
+    background-attachment: scroll;
+     background-repeat: no-repeat;
+     height: 400px;
+     opacity: .8;
+}
+.data button{
+    padding: 4% 8% 4% 8%;
+    border: solid rgb(50, 49, 32);
+}
+.data button:hover{
+    background-color: grey;
+    color: white;
+}
+
+
+/* final de antiguedades */
+
+/* // */
+@media (max-width: 516px) {
+
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction:column;
+        justify-content:flex-end baseline;
+        align-items: center;
+        list-style: none;
+        
+    }
+}
+
+@media (max-width: 1000px) {
+.contenedor{
+    grid-template-areas:
+    'header     header     header' 
+    'main       main       main'
+    'main       main       main'
+    'main       main       main'
+    'article     aside        aside'     
+    'footer     footer     footer'
+    
+    }
+}
+@media (max-width: 647px) {
+    .contenedor{
+        grid-template-areas:
+        'header     header     header' 
+        'main       main       main'
+        'main       main       main'
+        'article    article    article '
+        'aside    aside      aside'     
+        'footer     footer     footer'
+        
+        }
+    }
+    @media (max-width: 768px) {
+         .div-1988 , .div-2023{
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .main-dos , .div-antiguedades{
+           display: flex;
+           flex-direction: column;
+           justify-content:center;
+           align-items: center;
+           width: 100%;
+
+       }
+   }

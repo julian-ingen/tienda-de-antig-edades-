@@ -1,0 +1,68 @@
+var formulario = document.getElementsByName('formulario')[0];
+
+var validarNombre = function(e){
+if (formulario.nombre.value == 0){
+alert("Completa el campo nombre");
+e.preventDefault(e);
+}
+};
+var validarApellido = function(e){
+if (formulario.apellido.value == 0){
+alert("Completa el campo apellido");
+e.preventDefault(e);
+}
+};
+
+var validarEmail = function(e){
+if (formulario.correo.value == 0){
+alert("Completa el campo email");
+e.preventDefault(e);
+}
+};
+var validarFecha = function(e){
+if (formulario.nacimiento.value == 0){
+alert("Completa el campo fecha de nacimiento");
+e.preventDefault(e);
+}
+};
+
+
+var radio = function(e){
+if(formulario.sexo[0].checked !== true && formulario.sexo[1].checked !==true &&formulario.sexo[2].checked !==true ){
+alert("completa el campo sexo");
+e.preventDefault(e);
+}
+};
+var checkBoxs = function(e){
+if(formulario.check.checked !== true){
+alert("acepta los terminos y condiciones");
+e.preventDefault(e);
+}
+};
+
+var validar = function(e){
+validarNombre(e);
+validarApellido(e);
+validarEmail(e);
+validarFecha(e);
+radio(e);
+checkBoxs(e);
+};
+
+formulario.addEventListener("submit", validar);
+//
+
+
+
+function refrescar(){
+var x = document.getElementsByClassName("moneda")
+fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
+.then(res =>res.json())
+.then(moneda=>{
+
+x[0].innerHTML=moneda[0].casa.nombre +": "+moneda[0].casa.venta
+x[1].innerHTML=moneda[1].casa.nombre +": "+moneda[1].casa.venta
+x[2].innerHTML=moneda[4].casa.nombre +": "+moneda[4].casa.venta
+})
+
+}
